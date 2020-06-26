@@ -178,20 +178,20 @@ header table {
     border-bottom:4px solid rgb(89, 209, 165);
     width:6%;
 }
-#photos {
+#github-repos {
     width:100%;
     columns:3;
     column-gap:4%;
     z-index:1;
     transition:0.4s ease-in-out;
 }
-#photos img {
+#github-repos img {
     width:100%;
     height:auto;
     margin:4.5% 0px;
     transition:0.4s ease-in-out;
 }
-#photos img:hover {
+#github-repos img:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -304,14 +304,14 @@ button:focus {
 }
 
 @media (max-width: 1000px){
-    #photos {
+    #github-repos {
     columns:1;
     column-gap:0%;
     }
-    #photos img {
+    #github-repos img {
         margin:2% 0px;
     }
-    #photos img:hover {
+    #github-repos img:hover {
         transform: scale(1);
         cursor: pointer;
     }
