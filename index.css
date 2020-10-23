@@ -389,3 +389,8 @@ button:focus {
         color:#000;
     }
 }
+
+#intro {
+    text-align: justify;
+    text-justify: inter-word;
+}
