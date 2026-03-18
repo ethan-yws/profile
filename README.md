@@ -28,6 +28,7 @@ Agent definitions live in [`agents/`](/Users/yiweishi/Documents/code/profile/age
 - [`agents/orchestrator.md`](/Users/yiweishi/Documents/code/profile/agents/orchestrator.md)
 - [`agents/repo-explorer.md`](/Users/yiweishi/Documents/code/profile/agents/repo-explorer.md)
 - [`agents/component-converter.md`](/Users/yiweishi/Documents/code/profile/agents/component-converter.md)
+- [`agents/release-engineer.md`](/Users/yiweishi/Documents/code/profile/agents/release-engineer.md)
 - [`agents/qa.md`](/Users/yiweishi/Documents/code/profile/agents/qa.md)
 
 ## Current Site Notes
@@ -42,7 +43,18 @@ Agent definitions live in [`agents/`](/Users/yiweishi/Documents/code/profile/age
 1. Run the repo explorer to inventory reusable elements and migration risks.
 2. Have the orchestrator define the React + TypeScript migration plan.
 3. Use the component converter to extract reusable UI into typed React components.
-4. Use QA to verify parity, responsiveness, and removal of legacy jQuery dependence.
+4. Use the release engineer to wire build and GitHub Pages deployment.
+5. Use QA to verify parity, responsiveness, deployment readiness, and removal of legacy jQuery dependence.
+
+## GitHub Pages Deployment
+
+This repo is configured for GitHub Pages project-site hosting at `/profile/`.
+
+- Vite base path is set for the repository path.
+- GitHub Actions workflow lives at `.github/workflows/deploy-pages.yml`.
+- The workflow deploys on pushes to `master` and can also be triggered manually.
+
+In GitHub repository settings, Pages should use `GitHub Actions` as the source.
 
 ## Repo-Specific Cautions
 

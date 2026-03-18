@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Validate that the React + TypeScript migration preserves behavior, layout, and content quality.
+Validate that the React + TypeScript migration preserves behavior, layout, content quality, and release readiness.
 
 ## Scope
 
@@ -10,8 +10,16 @@ Validate that the React + TypeScript migration preserves behavior, layout, and c
 - verify migrated interactions
 - catch accessibility and responsiveness regressions
 - confirm migration completeness
+- confirm build and deployment readiness
 
-## Test Checklist for This Repo
+## QA Gates
+
+This agent owns two separate gates:
+
+- parity QA: compare the React app against the static implementation
+- release QA: confirm the app is buildable and deployable for the intended hosting target
+
+## Parity Checklist for This Repo
 
 1. Verify all main sections render:
    - header
@@ -34,6 +42,15 @@ Validate that the React + TypeScript migration preserves behavior, layout, and c
    - readable heading order
 10. Confirm no legacy jQuery behavior is still required for the page to function.
 
+## Release Checklist for This Repo
+
+1. Verify `npm run build` succeeds.
+2. Verify built asset paths match the intended hosting base path.
+3. Verify the app can load correctly on GitHub Pages if that is the target host.
+4. Verify generated assets and ignored files follow repository expectations.
+5. Verify there is no remaining dependency on runtime jQuery or the old static boot path.
+6. Verify release blockers are explicit if build and deploy are not yet complete.
+
 ## Reporting Format
 
 Report findings in this order:
@@ -42,7 +59,8 @@ Report findings in this order:
 2. visual regressions
 3. accessibility issues
 4. responsive issues
-5. remaining migration gaps
+5. release issues
+6. remaining migration gaps
 
 Include file references and reproduction steps whenever possible.
 
@@ -51,4 +69,5 @@ Include file references and reproduction steps whenever possible.
 - no blocking parity regressions
 - no obvious broken links or dead interactions
 - migration is consistent with the orchestrator plan
+- build and deployment checks have been evaluated
 - any remaining issues are explicitly documented

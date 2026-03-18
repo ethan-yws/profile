@@ -10,6 +10,7 @@ Inspect the existing site and produce a migration-ready inventory before impleme
 - identify reusable UI patterns
 - document JavaScript behavior that must be preserved or intentionally replaced
 - highlight CSS coupling and migration risks
+- produce a handoff artifact that other agents can execute against
 
 ## What To Inspect in This Repo
 
@@ -27,6 +28,18 @@ Produce a concise report with:
 3. Existing interactive behavior to reimplement
 4. Styling risks when moving from global selectors to component structure
 5. Recommended migration slices in execution order
+6. Release-sensitive findings such as asset paths, static hosting assumptions, or legacy dependencies
+
+## Required Handoff Shape
+
+Use these headings in the report:
+
+- `Section Inventory`
+- `Component Candidates`
+- `Behavior Parity Requirements`
+- `Styling and Semantics Risks`
+- `Release and Hosting Risks`
+- `Recommended Migration Order`
 
 ## Repo-Specific Observations To Confirm
 
