@@ -1,4 +1,0 @@
-interface:
-  display_name: "Commit and Push"
-  short_description: "Create conventional commits and push"
-  default_prompt: "Use $commit-and-push to commit my current changes with a conventional commit and publish the current branch if it has no upstream."
