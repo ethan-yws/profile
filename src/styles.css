@@ -165,6 +165,7 @@ header {
 #intro {
   text-align: justify;
   text-justify: inter-word;
+  line-height: 1.4;
 }
 
 .hero-socials,
@@ -254,6 +255,15 @@ header {
   columns: 3;
   column-gap: 4%;
   transition: 0.4s ease-in-out;
+}
+
+.content-columns a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 1rem;
 }
 
 .content-columns img {
@@ -389,10 +399,20 @@ textarea:focus {
   }
 
   #about {
-    min-height: 75vh;
-    padding-top: 20vh;
+    min-height: auto;
+    padding-top: 9rem;
+    padding-bottom: 3rem;
     text-align: center;
-    padding-inline: 4%;
+    padding-inline: 5.5%;
+  }
+
+  #intro {
+    text-align: left;
+    text-justify: auto;
+    font-size: clamp(1.9rem, 5.5vw, 2.35rem);
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+    margin: 0;
   }
 
   .hero-socials {
@@ -400,10 +420,15 @@ textarea:focus {
     justify-content: center;
   }
 
+  .social-list {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
   .btn_one {
     padding: 6px 30px;
-    width: 60%;
-    margin: 4vh auto;
+    width: min(280px, 100%);
+    margin: 2rem auto;
     box-shadow: 0 10px 20px rgba(89, 209, 165, 0.8);
     background: rgb(89, 209, 165);
     color: #fff;
@@ -415,10 +440,15 @@ textarea:focus {
 
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .contact-row {
     padding: 10px 0;
+  }
+
+  #address {
+    position: static;
   }
 
   .contact-form input,
@@ -427,23 +457,43 @@ textarea:focus {
   }
 
   header {
-    width: 96vw;
+    width: 100%;
+    box-sizing: border-box;
     background: #fff;
     color: #000;
-    padding: 4vh 2vw;
-    position: absolute;
+    padding: 1.25rem 1rem 0.75rem;
+    position: sticky;
+    top: 0;
   }
 
   .header-inner {
     flex-direction: column;
+    gap: 0.75rem;
   }
 
   #navigation {
     justify-content: center;
+    gap: 0.25rem;
   }
 
   #navigation a {
     color: #000;
     margin-left: 0;
+    padding: 0.25rem 0.5rem;
+  }
+
+  #work .content-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  #work .content-columns a {
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid rgba(89, 209, 165, 0.45);
+    border-radius: 0.9rem;
+    background: rgba(89, 209, 165, 0.08);
   }
 }
