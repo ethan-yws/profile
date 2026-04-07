@@ -38,7 +38,7 @@ export type SiteData = {
 export const siteData: SiteData = {
   name: "Ethan Shi",
   intro:
-    "I'm a front-end developer who wants to help make the internet a more creative, accessible, and better place.",
+    "A full stack programming enthusiast known for being a proactive, collaborative team player who consistently exceeds expectations and embraces new challenges.",
   socialLinks: [
     {
       label: "LinkedIn",
@@ -69,18 +69,20 @@ export const siteData: SiteData = {
     title: "Work",
     items: [
       {
-        title: "Project Placeholder 01",
+        title: "Software Engineer",
         href: "#",
         tone: "paper",
-        badge: "Replace with project",
-        note: "Add title, thumbnail, and case-study link later.",
+        badge: "Tyro Payments / 2022 - Present",
+        note:
+          "Improved Tyro's merchant portal with React MFEs and REST APIs for faster, more modular delivery. Lifted security and release efficiency through Auth0 upgrades and CI/CD automation.",
       },
       {
-        title: "Project Placeholder 02",
+        title: "Full Stack Developer",
         href: "#",
         tone: "ink",
-        badge: "Replace with project",
-        note: "Use this card for another featured portfolio piece.",
+        badge: "Insurance Australia Group (IAG) / 2021 - 2022",
+        note:
+          "Built APIs and token migration services for IAG's customer loyalty platform. Delivered CI/CD tooling and React micro-frontends in a collaborative agile team.",
       },
       {
         title: "Project Placeholder 03",

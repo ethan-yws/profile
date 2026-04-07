@@ -15,7 +15,7 @@ describe("App", () => {
     ).toBeInTheDocument();
     expect(
       screen.getByText(
-        "I'm a front-end developer who wants to help make the internet a more creative, accessible, and better place.",
+        "A full stack programming enthusiast known for being a proactive, collaborative team player who consistently exceeds expectations and embraces new challenges.",
       ),
     ).toBeInTheDocument();
 
@@ -37,8 +37,10 @@ describe("App", () => {
   it("renders placeholder content for work cards and experiments", () => {
     render(<App />);
 
-    expect(screen.getAllByText("Replace with project")).toHaveLength(4);
-    expect(screen.getByText("Project Placeholder 01")).toBeInTheDocument();
+    expect(screen.getAllByText("Replace with project")).toHaveLength(2);
+    expect(screen.getByText("Software Engineer")).toBeInTheDocument();
+    expect(screen.getByText("Full Stack Developer")).toBeInTheDocument();
+    expect(screen.getByText("Project Placeholder 03")).toBeInTheDocument();
     expect(screen.getAllByText(/Experiment Placeholder/)).toHaveLength(3);
     expect(screen.getAllByText(/Add year/)).toHaveLength(3);
   });
