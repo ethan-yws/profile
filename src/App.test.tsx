@@ -45,6 +45,25 @@ describe("App", () => {
     expect(screen.getAllByText(/Add year/)).toHaveLength(3);
   });
 
+  it("opens a work detail modal and closes it with Escape", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "Software Engineer" }));
+
+    expect(
+      screen.getByRole("dialog", { name: /Software Engineer/i }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Overseeing and extending Tyro's merchant portal/i),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Led Buildkite and GitHub Actions automation/i),
+    ).toBeInTheDocument();
+
+    fireEvent.keyDown(window, { key: "Escape" });
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
   it("switches between light, dark, and device themes", () => {
     window.localStorage.clear();
     render(<App />);
