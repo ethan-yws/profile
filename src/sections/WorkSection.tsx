@@ -4,20 +4,32 @@ import type { WorkItem } from "../data/siteData";
 type WorkSectionProps = {
   title: string;
   items: readonly WorkItem[];
+  onSelectItem: (item: WorkItem) => void;
 };
 
-export function WorkSection({ title, items }: WorkSectionProps) {
+export function WorkSection({
+  title,
+  items,
+  onSelectItem,
+}: WorkSectionProps) {
   return (
-    <section id="work" className="content-section content-section--bold">
-      <SectionTitle title={title} className="section-title" />
-      <div className="content-columns">
+    <section id="work" className="portfolio-section">
+      <SectionTitle title={title} level={2} className="portfolio-section__title" />
+      <div className="project-grid">
         {items.map((item) => (
-          <a key={item.href} href={item.href} target="_blank" rel="noreferrer">
-            {item.label}{" "}
-            {item.iconClass ? (
-              <i className={item.iconClass} aria-hidden="true" />
-            ) : null}
-          </a>
+          <button
+            key={`${item.title}-${item.tone}`}
+            type="button"
+            className={`project-card project-card--${item.tone}`}
+            aria-label={item.title}
+            onClick={() => onSelectItem(item)}
+          >
+            <div className="project-card__badge">{item.badge}</div>
+            <div className="project-card__body">
+              <p className="project-card__title">{item.title}</p>
+              <p className="project-card__note">{item.note}</p>
+            </div>
+          </button>
         ))}
       </div>
     </section>

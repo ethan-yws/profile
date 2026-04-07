@@ -1,29 +1,34 @@
+import type { ThemePreference } from "../hooks/useThemePreference";
+
 type HeaderProps = {
-  logo: string;
-  isScrolled: boolean;
-  navigation: Array<{
-    href: string;
-    label: string;
-  }>;
+  themePreference: ThemePreference;
+  onThemeChange: (theme: ThemePreference) => void;
 };
 
-export function Header({ logo, isScrolled, navigation }: HeaderProps) {
+const themeOptions: ThemePreference[] = ["light", "dark", "device"];
+
+const themeIcons: Record<ThemePreference, string> = {
+  light: "fas fa-sun",
+  dark: "fas fa-moon",
+  device: "fas fa-laptop",
+};
+
+export function Header({ themePreference, onThemeChange }: HeaderProps) {
+  const currentIndex = themeOptions.indexOf(themePreference);
+  const nextTheme = themeOptions[(currentIndex + 1) % themeOptions.length];
+
   return (
-    <header
-      id="header"
-      className={`animated slideInDown ${isScrolled ? "header-scrolled" : ""}`}
-      style={{ animationDelay: "1.8s" }}
-    >
-      <div className="header-inner">
-        <div id="logo">{logo}</div>
-        <nav id="navigation" aria-label="Primary">
-          {navigation.map((item) => (
-            <a key={item.href} href={item.href}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
-      </div>
+    <header className="topbar">
+      <button
+        type="button"
+        className="theme-switch"
+        aria-label={`Theme: ${themePreference}. Switch to ${nextTheme}.`}
+        title={`Theme: ${themePreference}`}
+        onClick={() => onThemeChange(nextTheme)}
+      >
+        <i className={themeIcons[themePreference]} aria-hidden="true" />
+        <span className="sr-only">{themePreference}</span>
+      </button>
     </header>
   );
 }
