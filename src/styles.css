@@ -11,7 +11,7 @@
   --card-paper: #f4f1e8;
   --card-paper-line: rgba(232, 227, 214, 0.85);
   --card-ink: #1f1f1f;
-  --card-ink-glow: rgba(255, 255, 255, 0.82);
+  --card-ink-glow: rgba(255, 255, 255, 0.34);
   --card-mint: #8fd2b0;
   --card-butter: #f0ea7e;
   --header-space: 28px;
@@ -31,7 +31,7 @@
   --card-paper: #efe9db;
   --card-paper-line: rgba(221, 214, 196, 0.86);
   --card-ink: #1f1f1f;
-  --card-ink-glow: rgba(255, 255, 255, 0.84);
+  --card-ink-glow: rgba(255, 255, 255, 0.32);
   --card-mint: #86cda8;
   --card-butter: #f0eb86;
 }
@@ -244,7 +244,7 @@ img {
 .project-card--ink {
   color: #f5f5f5;
   background:
-    radial-gradient(circle at 50% 62%, var(--card-ink-glow) 0 21%, transparent 22%),
+    radial-gradient(circle at 68% 78%, var(--card-ink-glow) 0 19%, transparent 20%),
     linear-gradient(180deg, #232323 0%, var(--card-ink) 100%);
 }
 
@@ -302,7 +302,7 @@ img {
 .work-modal__panel--ink {
   color: #f5f5f5;
   background:
-    radial-gradient(circle at 50% 62%, var(--card-ink-glow) 0 21%, transparent 22%),
+    radial-gradient(circle at 58% 78%, var(--card-ink-glow) 0 17%, transparent 18%),
     linear-gradient(180deg, #232323 0%, var(--card-ink) 100%);
 }
 

@@ -109,7 +109,7 @@ export const siteData: SiteData = {
       {
         title: "Full Stack Developer",
         tone: "ink",
-        badge: "Insurance Australia Group (IAG) / 2021 - 2022",
+        badge: "IAG / 2021 - 2022",
         note:
           "Built APIs and token migration services for IAG's customer loyalty platform. Delivered CI/CD tooling and React micro-frontends in a collaborative agile team.",
         company: "Insurance Australia Group (IAG)",
