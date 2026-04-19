@@ -172,16 +172,20 @@ img {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 280px);
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  overscroll-behavior-x: contain;
 }
 
 .project-card {
-  min-height: 308px;
+  min-height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 18px;
+  padding: 24px;
   border: 1px solid transparent;
   background-clip: padding-box;
   text-decoration: none;
@@ -203,29 +207,29 @@ img {
 
 .project-card__badge {
   width: fit-content;
-  padding: 7px 10px;
+  padding: 8px 12px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
   color: #1a1a1a;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .project-card__body {
   display: grid;
-  gap: 8px;
+  gap: 10px;
 }
 
 .project-card__title {
   margin: 0;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.35;
 }
 
 .project-card__note {
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -471,9 +475,13 @@ img {
 
 @media (max-width: 900px) {
   .project-grid {
-    overflow-x: auto;
-    grid-template-columns: repeat(4, minmax(172px, 172px));
-    padding-bottom: 6px;
+    gap: 18px;
+    grid-auto-columns: minmax(250px, 250px);
+  }
+
+  .project-card {
+    min-height: 328px;
+    padding: 20px;
   }
 }
 
@@ -507,12 +515,12 @@ img {
 
   .project-grid {
     gap: 16px;
-    grid-template-columns: repeat(4, minmax(156px, 156px));
+    grid-auto-columns: minmax(220px, 220px);
   }
 
   .project-card {
-    min-height: 284px;
-    padding: 16px;
+    min-height: 320px;
+    padding: 20px;
   }
 
   .work-modal__panel {
