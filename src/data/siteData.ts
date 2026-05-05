@@ -73,13 +73,41 @@ export const siteData: SiteData = {
     title: "Work",
     items: [
       {
+        title: "Software Engineer II",
+        tone: "mint",
+        badge: "Microsoft / 2026 - Present",
+        note:
+          "Building reliable, scalable software for Azure Core, with a focus on cloud infrastructure, production-quality engineering, and service reliability.",
+        company: "Microsoft",
+        period: "2026 - Present",
+        summary:
+          "Working as a Software Engineer II in Azure Core, contributing to foundational cloud platform systems that support reliable, scalable Azure services.",
+        highlights: [
+          "Designing and implementing maintainable features for large-scale cloud infrastructure systems.",
+          "Collaborating across engineering teams to deliver dependable Azure platform capabilities.",
+          "Improving service reliability, observability, and release confidence through pragmatic engineering practices.",
+        ],
+        techStack: [
+          "TypeScript",
+          "React.js",
+          "Node.js",
+          "C#",
+          ".NET",
+          "Azure",
+          "Azure Core",
+          "Cloud Infrastructure",
+          "REST APIs",
+          "CI/CD",
+        ],
+      },
+      {
         title: "Software Engineer",
         tone: "paper",
-        badge: "Tyro Payments / 2022 - Present",
+        badge: "Tyro Payments / 2022 - 2026",
         note:
           "Improved Tyro's merchant portal with React MFEs and REST APIs for faster, more modular delivery. Lifted security and release efficiency through Auth0 upgrades and CI/CD automation.",
         company: "Tyro Payments",
-        period: "2022 - Present",
+        period: "2022 - 2026",
         summary:
           "Overseeing and extending Tyro's merchant portal while delivering new services across frontend, backend, security, and platform tooling.",
         highlights: [
